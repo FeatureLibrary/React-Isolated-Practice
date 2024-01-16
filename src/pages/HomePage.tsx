@@ -22,6 +22,10 @@ const exercises = [
         path: "/dynamic-list",
     },
     {
+        name: "Dynamic List With Categorization",
+        path: "/dynamic-list/with-categorization",
+    },
+    {
         name: "Timer",
         path: "/timer",
     },
@@ -32,6 +36,10 @@ const exercises = [
     {
         name: "Search Filter",
         path: "/search-filter",
+    },
+    {
+        name: "Quiz",
+        path: "/quiz",
     },
 ] satisfies Exercise[];
 

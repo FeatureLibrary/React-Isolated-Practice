@@ -9,7 +9,7 @@ const DynamicListPage = () => {
     const [validationMessage, setValidationMessage] = useState("");
 
     const handleAddListItemsToStorage = () => {
-        const stringifiedListItems = localStorage.getItem("listItems");
+        const stringifiedListItems = localStorage.getItem("listItemsOnly");
 
         if (stringifiedListItems) {
             const parsedListItems = JSON.parse(
@@ -17,21 +17,27 @@ const DynamicListPage = () => {
             ) as string[];
             parsedListItems.push(listItem);
 
-            localStorage.setItem("listItems", JSON.stringify(parsedListItems));
+            localStorage.setItem(
+                "listItemsOnly",
+                JSON.stringify(parsedListItems),
+            );
         } else {
-            localStorage.setItem("listItems", JSON.stringify(listItems));
+            localStorage.setItem("listItemsOnly", JSON.stringify(listItems));
         }
     };
 
     const handleRemoveListItemsInStorage = (item: string) => {
-        const stringifiedListItems = localStorage.getItem("listItems");
+        const stringifiedListItems = localStorage.getItem("listItemsOnly");
         const parsedListItems = JSON.parse(stringifiedListItems!) as string[];
         const filteredListItems = parsedListItems.filter(
             (listItem) =>
                 listItem.toLocaleLowerCase() !== item.toLocaleLowerCase(),
         );
 
-        localStorage.setItem("listItems", JSON.stringify(filteredListItems));
+        localStorage.setItem(
+            "listItemsOnly",
+            JSON.stringify(filteredListItems),
+        );
     };
 
     const handleSubmitListItem = (event: React.FormEvent) => {
@@ -77,14 +83,14 @@ const DynamicListPage = () => {
         handleRemoveListItemsInStorage(item);
     };
 
-    const stringifiedListItems = localStorage.getItem("listItems");
+    const stringifiedListItems = localStorage.getItem("listItemsOnly");
     const parsedListItems =
         stringifiedListItems && (JSON.parse(stringifiedListItems) as string[]);
 
     return (
         <Layout>
             <ExerciseWithBackNav name="Dynamic List" />
-            <div>
+            <div className="flex gap-20">
                 <div>
                     <form
                         className="flex flex-col gap-5 mb-5"
@@ -113,23 +119,28 @@ const DynamicListPage = () => {
                         </p>
                     )}
                 </div>
-                <ul className="flex flex-col gap-2">
-                    {parsedListItems &&
-                        parsedListItems.map((item) => (
-                            <li
-                                className="flex items-center justify-between text-lg w-[300px]"
-                                key={item}
-                            >
-                                <p>{item}</p>
-                                <div
-                                    onClick={() => handleRemoveItem(item)}
-                                    title="Remove item"
+                <div className="flex flex-col gap-5">
+                    <h1 className="font-bold text-2xl text-gray-500">
+                        Your Todo List
+                    </h1>
+                    <ul className="flex flex-col gap-2">
+                        {parsedListItems &&
+                            parsedListItems.map((item) => (
+                                <li
+                                    className="flex items-center justify-between text-lg w-[300px]"
+                                    key={item}
                                 >
-                                    <FaTrashCan color="red" />
-                                </div>
-                            </li>
-                        ))}
-                </ul>
+                                    <p>{item}</p>
+                                    <div
+                                        onClick={() => handleRemoveItem(item)}
+                                        title="Remove item"
+                                    >
+                                        <FaTrashCan color="red" />
+                                    </div>
+                                </li>
+                            ))}
+                    </ul>
+                </div>
             </div>
         </Layout>
     );
