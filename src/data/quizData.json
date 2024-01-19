@@ -1,0 +1,127 @@
+[
+    {
+        "question": {
+            "number": 1,
+            "text": "What is the capital of France?"
+        },
+        "answers": [
+            {
+                "choice": "a",
+                "choiceText": "Berlin"
+            },
+            {
+                "choice": "b",
+                "choiceText": "Madrid"
+            },
+            {
+                "choice": "c",
+                "choiceText": "Paris"
+            }
+        ],
+        "correctAnswer": {
+            "choice": "c",
+            "choiceText": "Paris",
+            "description": "Paris is the capital of France because it has been the country's major political, economic, cultural, and scientific center since the 17th century."
+        }
+    },
+    {
+        "question": {
+            "number": 2,
+            "text": "Which planet is known as the Red Planet?"
+        },
+        "answers": [
+            {
+                "choice": "a",
+                "choiceText": "Mars"
+            },
+            {
+                "choice": "b",
+                "choiceText": "Jupiter"
+            },
+            {
+                "choice": "c",
+                "choiceText": "Saturn"
+            }
+        ],
+        "correctAnswer": {
+            "choice": "a",
+            "choiceText": "Mars",
+            "description": "Mars is known as the Red Planet due to its reddish appearance, which is caused by iron oxide (rust) on its surface."
+        }
+    },
+    {
+        "question": {
+            "number": 3,
+            "text": "Who wrote 'Romeo and Juliet'?"
+        },
+        "answers": [
+            {
+                "choice": "a",
+                "choiceText": "William Shakespeare"
+            },
+            {
+                "choice": "b",
+                "choiceText": "Charles Dickens"
+            },
+            {
+                "choice": "c",
+                "choiceText": "Jane Austen"
+            }
+        ],
+        "correctAnswer": {
+            "choice": "a",
+            "choiceText": "William Shakespeare",
+            "description": "William Shakespeare wrote 'Romeo and Juliet', a famous tragedy play, widely recognized as one of his most celebrated works, dating back to the early 1590s."
+        }
+    },
+    {
+        "question": {
+            "number": 4,
+            "text": "What is the largest mammal in the world?"
+        },
+        "answers": [
+            {
+                "choice": "a",
+                "choiceText": "African Elephant"
+            },
+            {
+                "choice": "b",
+                "choiceText": "Blue Whale"
+            },
+            {
+                "choice": "c",
+                "choiceText": "Giraffe"
+            }
+        ],
+        "correctAnswer": {
+            "choice": "b",
+            "choiceText": "Blue Whale",
+            "description": "The Blue Whale is the largest mammal in the world; known for its immense size, it's the largest animal known to have ever existed."
+        }
+    },
+    {
+        "question": {
+            "number": 5,
+            "text": "What is the chemical symbol for gold?"
+        },
+        "answers": [
+            {
+                "choice": "a",
+                "choiceText": "Au"
+            },
+            {
+                "choice": "b",
+                "choiceText": "Ag"
+            },
+            {
+                "choice": "c",
+                "choiceText": "Fe"
+            }
+        ],
+        "correctAnswer": {
+            "choice": "a",
+            "choiceText": "Au",
+            "description": "The chemical symbol for gold is Au, which comes from the Latin word for gold, 'aurum', reflecting gold's historical importance and value."
+        }
+    }
+]
